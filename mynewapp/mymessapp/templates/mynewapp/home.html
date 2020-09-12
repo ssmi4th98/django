@@ -1,0 +1,39 @@
+{% load static %}
+
+<!this "load static" {use curly braces!} (for django 3) is a template tag "load" that allows the loading of other templates files.->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA=Compatible" content="IE=edge, chrome=1">
+        <title>Message Box App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">   <!-this uses the "static" templeate tag->
+
+    </head>
+
+    <body>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar">
+                    <a class="navbar-brand" href="#"> Home</a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="jumbotron">
+                    <h1>{{ h1Text }}</h1>  <!#values will be given from views>
+                    <p>{{ pText }}</p>     <!values will be given from views>
+                    <button type="button" class="btn btn-promary">login</button>
+                </div>
+            </div>
+        </div>
+            <script src="{% static 'jquery-3.3.1.min.js' %}"></script>  <!static template tags>
+            <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>  <!static template tags>
+    </body>
+
+
+</html>
